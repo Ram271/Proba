@@ -1,0 +1,66 @@
+body{
+ 	background: grey;
+ 	padding: 50px;
+}
+.pomodoro{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    background-color: grey;
+    padding: auto 100px;
+    /*border-radius: 50%;*/
+    /*position: relative;*/
+    /*text-align: left;*/
+}
+.first{
+	font-size: 36px;
+	text-align: center;
+}
+
+.second{
+    font-size: 20px;
+    margin-top: 60px;
+    padding-left: 40px;
+}
+
+.left{
+	display: inline-block;
+}
+
+.right{
+	display: inline-block;
+	margin-left: 100px;
+}
+
+.third{
+	margin-top: 50px;
+}
+
+.round{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.button {
+    background-color: #4CAF50;
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: white;
+    /*padding: 15px 10px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.num{
+    display: inline-block;
+}
