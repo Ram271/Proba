@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<!-- <body onLoad="circle()"> -->
+<body onload="digitalWatch()">
+  <p id="digital_watch" style="color: #f00; font-size: 120%; font-weight: bold;"></p>
+  <div>Hi everybody</div> 
+  <section class="pomodoro">
+  	<div class = "first">
+  	  Pomodoro Calculator
+  	</div>
+    <div class = "second">
+      <div id="left" class="left">
+        <div>Job</div>
+        <div class="count">
+            <button class="button" value = '999' title="HI">AC</button>
+            <div class="num">20</div>
+            <button class="button" value = '999'>AC</button>
+        </div>
+      </div>
+      <div id="right" class="right">
+        <div>Relaxation</div>
+        <div class="count">
+            <button class="button" value = '999'>AC</button>
+            <div class="num">10</div>
+            <button class="button" value = '999'>AC</button>
+        </div>
+      </div>
+    </div>
+  	<div class = "third">
+      <!-- <div id="round" class="round"></div> -->
+  		<button id="round" class="round"></button>
+  	</div>    
+    <canvas id="circle"></canvas>
+  </section>	
+
+<script>
+function circle()
+{
+    var canvas = document.getElementById('circle');
+    var obCanvas = canvas.getContext('2d');
+    
+    obCanvas.beginPath();
+    // obCanvas.arc(150, 75, 50, 2*Math.PI/4, 2*Math.PI/2, false);
+    obCanvas.arc(150, 75, 50, 1*Math.PI/4, 3*Math.PI/4, false);
+    obCanvas.fillStyle = 'green';
+    obCanvas.fill();
+    obCanvas.lineWidth = 1;
+    obCanvas.strokeStyle = 'red';
+    obCanvas.stroke();
+}
+</script>
+<script type="text/javascript">
+  var num = 0;
+  function digitalWatch() {
+    // var date = new Date();
+    // var hours = date.getHours();
+    // var minutes = date.getMinutes();
+    // var seconds = date.getSeconds();
+    // if (hours < 10) hours = "0" + hours;
+    // if (minutes < 10) minutes = "0" + minutes;
+    // if (seconds < 10) seconds = "0" + seconds;
+    // document.getElementById("digital_watch").innerHTML = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("digital_watch").innerHTML = num;
+    num++;
+    setTimeout("digitalWatch()", 1000);
+    circle();
+  }
+</script>
+</body>
+	<!-- <script src="script3.js"></script> -->
+</html>
